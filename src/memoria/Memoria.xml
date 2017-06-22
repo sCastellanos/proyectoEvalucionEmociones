@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<memoria>
+    <recuerdo>
+        <hecho>
+            <sujeto>Agente</sujeto>
+            <copula>despierta</copula>
+            <predicado>9:30 a.m</predicado>
+        </hecho>
+        <emocion>Enojo</emocion>
+            <acciones>
+            </acciones>
+            <objetivos_afectados>
+                <objetivo>
+                </objetivo>
+            </objetivos_afectados>
+            <familiaridad>1</familiaridad>
+    </recuerdo>
+</memoria>

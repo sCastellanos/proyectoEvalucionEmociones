@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Importancia de un objetivo puede ser:
+NoImportante, LigeramenteImportante y AltamenteImportante.
+
+Las estiquetas relacion estan compuestas por tipo, que pueden se "S" suficiente, "F" facilitadoras, "N" necesarias e "I" inhibitorias.
+La informacion entre las etiquetas de relacion, se indica el ID de los objetivos que afecta al cumplirse este objetivo.
+-->
+<objetivos>
+    <objetivo id="1">
+        <enunciado>OBTENER TITULO UNIVERSIDAD</enunciado>
+        <importancia>AltamenteImportante</importancia>
+        <relaciones_salida>
+        </relaciones_salida>
+    </objetivo>
+    <objetivo id="2">
+        <enunciado>SER GRADUADO ITSON</enunciado>
+        <importancia>AltamenteImportante</importancia>
+        <relaciones_salida>
+            <relacion tipo="S">1</relacion>
+        </relaciones_salida>
+    </objetivo>
+    <objetivo id="3">
+        <enunciado>SER GRADUADO ITESCA</enunciado>
+        <importancia>AltamenteImportante</importancia>
+        <relaciones_salida>
+            <relacion tipo="S">1</relacion>
+        </relaciones_salida>
+    </objetivo>
+    <objetivo id="4">
+        <enunciado>SER ADMITIDO UNIVERSIDAD</enunciado>
+        <importancia>AltamenteImportante</importancia>
+        <relaciones_salida>
+            <relacion tipo="N">2</relacion>
+            <relacion tipo="N">3</relacion>
+        </relaciones_salida>
+    </objetivo>
+    <objetivo id="5">
+        <enunciado>LLEGAR TEMPRANO TRABAJO</enunciado>
+        <importancia>AltamenteImportante</importancia>
+        <relaciones_salida>
+        </relaciones_salida>
+    </objetivo>
+    <objetivo id="6">
+        <enunciado>BAJAR PESO</enunciado>
+        <importancia>LigeramenteImportante</importancia>
+        <relaciones_salida>
+        </relaciones_salida>
+    </objetivo>    
+</objetivos>
+ 
