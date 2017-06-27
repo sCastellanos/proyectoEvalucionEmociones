@@ -9,6 +9,9 @@ import clases.Estimulo;
 import clases.Hecho;
 import java.io.File;
 import java.io.IOException;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -40,9 +43,6 @@ public class EstimulosHandler extends DefaultHandler {
             case "sujeto":
                 hecho.setSujeto(buffer.toString());
                 break;
-            case "copula":
-                hecho.setCopula(buffer.toString());
-                break;
             case "predicado":
                 hecho.setPredicado(buffer.toString());
                 break;
@@ -64,10 +64,7 @@ public class EstimulosHandler extends DefaultHandler {
                 break;
             case "sujeto":
                 buffer.delete(0, buffer.length());
-                break;                
-            case "copula":
-                buffer.delete(0, buffer.length());
-                break;
+                break;     
             case "predicado":
                 buffer.delete(0, buffer.length());
                 break;                
@@ -98,5 +95,13 @@ public class EstimulosHandler extends DefaultHandler {
         Estimulo e = manejadorEstimulos.getEvento();
      
         return e;
+    }
+
+    public Estimulo obtenerEstimulo2() throws JAXBException {
+        JAXBContext context = JAXBContext.newInstance(Estimulo.class);
+        //Pasar de xml a java 
+        Unmarshaller unmarshaller = context.createUnmarshaller();
+        Estimulo estimulo = (Estimulo) unmarshaller.unmarshal(new File("src//estimulos//Estimulos.xml"));
+        return estimulo;
     }
 }

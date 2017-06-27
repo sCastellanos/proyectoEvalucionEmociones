@@ -6,10 +6,14 @@
 package manejadores;
 
 import clases.Expectativa;
+import clases.Expectativas;
 import clases.Hecho;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -38,9 +42,6 @@ public class ExpectativasHandler extends DefaultHandler{
             case "sujeto":
                 hecho.setSujeto(buffer.toString());
                 break;
-            case "copula":
-                hecho.setCopula(buffer.toString());
-                break;
             case "predicado":
                 hecho.setPredicado(buffer.toString());
                 break;
@@ -64,7 +65,6 @@ public class ExpectativasHandler extends DefaultHandler{
                 hecho=new Hecho();
                 break;
             case "sujeto":
-            case "copula":
             case "predicado":
                 buffer.delete(0, buffer.length());
                 break;
@@ -88,5 +88,14 @@ public class ExpectativasHandler extends DefaultHandler{
         ArrayList<Expectativa> exp = manejadorExpectativas.getExpectativas();
               
         return exp;
+    }
+
+    public ArrayList<Expectativa> obtenerExpectativas() throws JAXBException {
+        JAXBContext context = JAXBContext.newInstance(Expectativas.class);
+        //Pasar de xml a java 
+        Unmarshaller unmarshaller = context.createUnmarshaller();
+        Expectativas exp = (Expectativas) unmarshaller.unmarshal(new File("src//expectativas//expectativas.xml"));
+        
+        return exp.getExpectativas();
     }
 }

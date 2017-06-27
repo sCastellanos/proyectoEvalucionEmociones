@@ -54,9 +54,6 @@ public class RecuerdosHandler extends DefaultHandler {
             case "sujeto":
                 hecho.setSujeto(buffer.toString());
                 break;
-            case "copula":
-                hecho.setCopula(buffer.toString());
-                break;
             case "predicado":
                 hecho.setPredicado(buffer.toString());
                 break;
@@ -96,9 +93,6 @@ public class RecuerdosHandler extends DefaultHandler {
                 hecho = new Hecho();
                 break;
             case "sujeto":
-                buffer.delete(0, buffer.length());
-                break;
-            case "copula":
                 buffer.delete(0, buffer.length());
                 break;
             case "predicado":

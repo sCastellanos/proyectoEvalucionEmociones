@@ -4,17 +4,25 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<expectativas>
-    <expectativa>
-        <hecho>
-            <sujeto>Agente</sujeto>
-            <copula>despierta</copula>
-            <predicado>9:30 a.m</predicado>
-        </hecho>
-        <hecho>
-            <sujeto>Agente</sujeto>
-            <copula>conduce</copula>
-            <predicado>hacia el trabajo</predicado>
-        </hecho>
-    </expectativa>
-</expectativas>
+<banco_expectativas>
+    <expectativas>
+        <expectativa>
+            <hecho>
+                <sujeto>Agente</sujeto>
+                <predicado>despierta 9:30 a.m</predicado>
+            </hecho>
+        </expectativa>
+        <expectativa>
+            <hecho>
+                <sujeto>Agente</sujeto>
+                <predicado>conduce hacia el trabajo</predicado>
+            </hecho>
+        </expectativa>
+         <expectativa>
+            <hecho>
+                <sujeto>Agente</sujeto>
+                <predicado>no fue admitido</predicado>
+            </hecho>
+        </expectativa>
+    </expectativas>
+</banco_expectativas>

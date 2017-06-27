@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <estimulo tipo="evento">
     <consecuencia>yo</consecuencia>
-        <hecho>
-            <sujeto>Agente</sujeto>
-            <copula>no</copula>
-            <predicado>fue admitido</predicado>
-        </hecho>
+    <hecho>
+        <sujeto>Agente</sujeto>
+        <predicado>no fue admitido</predicado>
+    </hecho>
+    <esExpectativa></esExpectativa>
+    <deseabilidad></deseabilidad>
+    <novedad></novedad>
+    <placer></placer>
+    <oObjetivos></oObjetivos>
+    <potencialAf></potencialAf>
+    <emocion></emocion>
 </estimulo>

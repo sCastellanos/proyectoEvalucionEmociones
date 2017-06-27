@@ -6,6 +6,7 @@
 package clases;
 
 import java.io.IOException;
+import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 import manejadores.EstimulosHandler;
 import org.xml.sax.SAXException;
@@ -21,8 +22,8 @@ EstimulosHandler eh;
         eh= new  EstimulosHandler();
     }
 
-    public Estimulo obtenerEstimulo() throws SAXException, IOException, ParserConfigurationException {
-        return eh.obtenerEstimulo();
+    public Estimulo obtenerEstimulo() throws SAXException, IOException, ParserConfigurationException, JAXBException {
+        return eh.obtenerEstimulo2();
     }
     
     

@@ -5,14 +5,20 @@
  */
 package clases;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
 /**
  *
  * @author Estudiante_2
  */
+@XmlRootElement(name = "estimulo")
+@XmlType(propOrder={"tipo","consecuencia", "hecho", "esExpectativa", "deseabilidad", "novedad", "placer", "oObjetivos", "potencialAf", "emocion"})
 public class Estimulo {
-    private int id;
-    private Hecho hecho;
+    private String tipo;
     private String consecuencia;
+    private Hecho hecho;
     private boolean esExpectativa;
     private String deseabilidad;
     private String novedad;
@@ -20,7 +26,7 @@ public class Estimulo {
     private String oObjetivos;
     private String potencialAf;
     private String emocion;
-    private String tipo;
+    
 
     public String getNovedad() {
         return novedad;
@@ -34,6 +40,7 @@ public class Estimulo {
         return placer;
     }
 
+    @XmlAttribute(name="tipo")
     public String getTipo() {
         return tipo;
     }
@@ -89,14 +96,6 @@ public class Estimulo {
         this.consecuencia = consecuencia;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public boolean isEsExpectativa() {
         return esExpectativa;
     }
@@ -113,11 +112,9 @@ public class Estimulo {
         this.deseabilidad = deseabilidad;
     }
 
-
     @Override
     public String toString() {
         return "Estimulo{" + "hecho=" + hecho + ", consecuencia=" + consecuencia + ", esExpectativa=" + esExpectativa + ", deseabilidad=" + deseabilidad + ", novedad=" + novedad + ", placer=" + placer + ", oObjetivos=" + oObjetivos + ", potencialAf=" + potencialAf + ", emocion=" + emocion + '}';
     }
-    
-    
+
 }

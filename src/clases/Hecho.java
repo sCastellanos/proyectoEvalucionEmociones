@@ -6,14 +6,17 @@
 package clases;
 
 import java.util.Objects;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  *
  * @author Estudiante_2
  */
+@XmlRootElement(name="hecho")
+@XmlType(propOrder={"sujeto","predicado"})
 public class Hecho {
     private String sujeto;
-    private String copula;
     private String predicado;
 
     public Hecho() {
@@ -28,13 +31,6 @@ public class Hecho {
         this.sujeto = sujeto;
     }
 
-    public String getCopula() {
-        return copula;
-    }
-
-    public void setCopula(String copula) {
-        this.copula = copula;
-    }
 
     public String getPredicado() {
         return predicado;
@@ -48,7 +44,6 @@ public class Hecho {
     public int hashCode() {
         int hash = 3;
         hash = 37 * hash + Objects.hashCode(this.sujeto);
-        hash = 37 * hash + Objects.hashCode(this.copula);
         hash = 37 * hash + Objects.hashCode(this.predicado);
         return hash;
     }
@@ -68,9 +63,6 @@ public class Hecho {
         if (!Objects.equals(this.sujeto, other.sujeto)) {
             return false;
         }
-        if (!Objects.equals(this.copula, other.copula)) {
-            return false;
-        }
         if (!Objects.equals(this.predicado, other.predicado)) {
             return false;
         }
@@ -81,6 +73,6 @@ public class Hecho {
     
     @Override
     public String toString() {
-        return "Hecho{" + "sujeto=" + sujeto + ", copula=" + copula + ", predicado=" + predicado + '}';
+        return "Hecho{" + "sujeto=" + sujeto + ", predicado=" + predicado + '}';
     }
 }

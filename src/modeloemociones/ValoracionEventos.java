@@ -15,6 +15,7 @@ import dimensiones.OrientacionObj;
 import dimensiones.Placer;
 import dimensiones.PotencialAf;
 import java.io.IOException;
+import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import manejadores.EscrituraDom;
@@ -32,13 +33,13 @@ public class ValoracionEventos {
      * @throws org.xml.sax.SAXException
      * @throws java.io.IOException
      */
-    public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, TransformerException {
+    public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, TransformerException, JAXBException {
         CalculoEmociones ce = new CalculoEmociones();
         Estimulo estimulo = new Estimulo();
         Expectativa expectativa = new Expectativa();
         EscrituraDom eDOM = new EscrituraDom();
    
-         Percepcion percepcion = new Percepcion();
+        Percepcion percepcion = new Percepcion();
        
 
         /***********************Variables************************/

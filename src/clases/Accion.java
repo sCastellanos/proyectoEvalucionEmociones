@@ -5,10 +5,16 @@
  */
 package clases;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
 /**
  *
  * @author Estudiante_2
  */
+@XmlRootElement(name="Accion")
+@XmlType(propOrder={"enunciado","objetivo"})
 public class Accion {
     private String enunciado;
     private String id_objetivoDestino;
@@ -23,7 +29,7 @@ public class Accion {
     public void setEnunciado(String enunciado) {
         this.enunciado = enunciado;
     }
-
+    @XmlElement(name="objetivo")
     public String getId_objetivoDestino() {
         return id_objetivoDestino;
     }

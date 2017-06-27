@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><recuerdos>
-    <recuerdo>
-        <hecho>
-            <sujeto>Agente</sujeto>
-            <predicado>fue admitido</predicado>
-        </hecho>
-        <consecuencia>yo</consecuencia>
-        <esExpectativa>false</esExpectativa>
-        <deseabilidad>altamenteIndeseable</deseabilidad>
-        <novedad>poco novedoso</novedad>
-        <placer>pocoDesagradable</placer>
-        <orientacion_objetivos>negativo</orientacion_objetivos>
-    </recuerdo>
-</recuerdos>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><recuerdos><recuerdo><hecho><sujeto>Agente</sujeto><predicado>fue admitido</predicado></hecho><consecuencia>yo</consecuencia><esExpectativa>false</esExpectativa><deseabilidad>altamenteIndeseable</deseabilidad><novedad>poco novedoso</novedad><placer>pocoDesagradable</placer><orientacion_objetivos>negativo</orientacion_objetivos></recuerdo></recuerdos>
