@@ -1,0 +1,48 @@
+FUNCTION_BLOCK PAD 
+
+VAR_INPUT
+	pleasure : REAL;
+	arousal : REAL;
+	dimension : REAL;
+END_VAR 
+
+VAR_OUTPUT
+	happiness : REAL;
+	fear : REAL;
+END_VAR 
+
+FUZZIFY pleasure
+	 TERM low := (0,1) (1,0);
+END_FUZZIFY 
+
+FUZZIFY arousal
+	 TERM low := (0,1) (1,0);
+END_FUZZIFY 
+
+FUZZIFY dimension
+	 TERM low := (0,1) (1,0);
+END_FUZZIFY 
+
+DEFUZZIFY happiness
+	 TERM low := (0,1) (1,0);
+	 METHOD : COG;
+	 DEFAULT := 0;
+END_DEFUZZIFY 
+
+DEFUZZIFY fear
+	 TERM low := (0,1) (0.3,0);
+	 TERM high := (0.4,0) (1,1);
+	 METHOD : COG;
+	 DEFAULT := 0;
+END_DEFUZZIFY 
+
+RULEBLOCK No1
+	 AND : MIN;
+	 ACT : MIN;
+	 ACCU : MAX;
+	 RULE 0:  IF pleasure IS low THEN happiness IS low;
+	 RULE 1:  IF pleasure IS low THEN fear IS low;
+	 RULE 2:  IF pleasure IS low THEN fear IS high;
+END_RULEBLOCK 
+
+END_FUNCTION_BLOCK

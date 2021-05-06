@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<parameters>
+
+<!-- Theories considered for evaluation of incoming stimuli and generation of emotions --> 
+	<evaluationTheory>PAD</evaluationTheory>
+	<emotionsTheory>Ekman</emotionsTheory>
+
+<!-- Input Info --> 
+	<input>
+		<id>Action1</id>
+
+		<type>Action</type>
+
+		<intrinsic_significance>0.2</intrinsic_significance>
+
+		<cognitive_significance>0.8</cognitive_significance>
+		
+		<!-- Listed properties depend on the type of input --> 
+		<properties> </properties>
+
+		<emotional_significance> 
+			<dimension id = "pleasure">
+				<linguistic_term>
+					<name>low</name>
+					<mship_value>0.5</mship_value>
+				</linguistic_term>
+				<linguistic_term>
+					<name>medium</name>
+					<mship_value>0.5</mship_value>
+				</linguistic_term>
+				<linguistic_term>
+					<name>high</name>
+					<mship_value>0.5</mship_value>
+				</linguistic_term>
+			</dimension>
+		</emotional_significance>
+
+
+
+		<elicited_emotions>
+			<emotion id = "happiness">
+				<intensity>
+					<name>low</name>
+					<mship_value> 0.5 </mship_value>
+				</intensity>
+				<intensity>
+					<name>medium</name>
+					<mship_value> 0.5 </mship_value>
+				</intensity>
+				<intensity>
+					<name>high</name>
+					<mship_value> 0.5 </mship_value>
+				</intensity>
+			</emotion>
+		<elicited_emotions>
+	<input>
+
+<!-- Agent related info --> 
+	<agent_status>
+		<current_emotion>Action1</current_emotion>
+		<current_mood>Action1</current_mood>
+		<action_tendency>Action1</action_tendency>
+	<agent_status>
+
+
+</parameters>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<parameters>
+
+<!-- Actions --> 
+	<action>
+		<id>Action1</id>
+		<tag>compliment</tag>
+		<who>friend</who>
+	</action>
+	<action>
+		<id>Action2</id>
+		<tag>compliment</tag>
+		<who>friend</who>
+	</action>
+	<action>
+		<id>Action3</id>
+		<tag>compliment</tag>
+		<who>friend</who>
+	</action>
+	<action>
+		<id>Action4</id>
+		<tag>compliment</tag>
+		<who>friend</who>
+	</action>
+	<action>
+		<id>Action5</id>
+		<tag>compliment</tag>
+		<who>friend</who>
+	</action>
+
+
+<!-- Events --> 
+
+	<event>
+		<id>Event1</id>
+		<tag>convenient</tag>
+	</event>
+	<event>
+		<id>Event2</id>
+		<tag>convenient</tag>
+	</event>
+	<event>
+		<id>Event3</id>
+		<tag>convenient</tag>
+	</event>
+	<event>
+		<id>Event4</id>
+		<tag>convenient</tag>
+	</event>
+	<event>
+		<id>Event5</id>
+		<tag>convenient</tag>
+	</event>
+</parameters>
+
+
+
+
+
+
+
+
+
+
+
+

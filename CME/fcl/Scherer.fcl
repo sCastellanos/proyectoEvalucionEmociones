@@ -1,0 +1,94 @@
+FUNCTION_BLOCK PAD 
+
+VAR_INPUT
+	pleasure : REAL;
+	arousal : REAL;
+	dominance : REAL;
+END_VAR 
+
+VAR_OUTPUT
+	happiness : REAL;
+	surprise : REAL;
+	sadness : REAL;
+	disgust : REAL;
+	fear : REAL;
+	angry : REAL;
+END_VAR 
+
+FUZZIFY pleasure
+	 TERM low := (0,1) (0.3,1) (0.4,0);
+	 TERM medium := (0.3,0) (0.5,1) (0.7,1) (0.8,0);
+	 TERM high := (0.6,0) (0.9,1) (1,1);
+END_FUZZIFY 
+
+FUZZIFY arousal
+	 TERM low := (0,1) (0.2,1) (0.3,0);
+	 TERM medium := (0.2,0) (0.4,1) (0.6,1) (0.7,0);
+	 TERM high := (0.5,0) (0.9,1) (1,1);
+END_FUZZIFY 
+
+FUZZIFY dominance
+	 TERM low := (0,1) (0.1,1) (0.2,0);
+	 TERM medium := (0.1,0) (0.5,1) (0.6,1) (0.9,0);
+	 TERM high := (0.6,0) (0.9,1) (1,1);
+END_FUZZIFY 
+
+DEFUZZIFY happiness
+	 TERM low := (0,0) (0.1, 1) (0.3,1) (0.4,0);
+	 TERM medium := (0.3,0) (0.4,1) (0.6,1) (0.7,0);
+	 TERM high := (0.6,0) (0.7,1) (1,1);
+	 METHOD : COG;
+	 DEFAULT := 0;
+END_DEFUZZIFY 
+
+DEFUZZIFY surprise
+	 TERM low :=  (0,0) (0.1, 1) (0.3,1) (0.4,0) ;
+	 TERM medium := (0.3,0) (0.4,1) (0.6,1) (0.7,0);
+	 TERM high := (0.6,0) (0.7,1) (1,1);
+	 METHOD : COG;
+	 DEFAULT := 0;
+END_DEFUZZIFY 
+
+DEFUZZIFY sadness
+	 TERM low :=  (0,0) (0.1, 1) (0.3,1) (0.4,0) ;
+	 TERM medium := (0.3,0) (0.4,1) (0.6,1) (0.7,0);
+	 TERM high := (0.6,0) (0.7,1) (1,1);
+	 METHOD : COG;
+	 DEFAULT := 0;
+END_DEFUZZIFY 
+
+DEFUZZIFY disgust
+	 TERM low :=  (0,0) (0.1, 1) (0.3,1) (0.4,0) ;
+	 TERM medium := (0.3,0) (0.4,1) (0.6,1) (0.7,0);
+	 TERM high := (0.6,0) (0.7,1) (1,1);
+	 METHOD : COG;
+	 DEFAULT := 0;
+END_DEFUZZIFY 
+
+DEFUZZIFY fear
+	 TERM low :=  (0,0) (0.1, 1) (0.3,1) (0.4,0) ;
+	 TERM medium := (0.3,0) (0.4,1) (0.6,1) (0.7,0);
+	 TERM high := (0.6,0) (0.7,1) (1,1);
+	 METHOD : COG;
+	 DEFAULT := 0;
+END_DEFUZZIFY 
+
+DEFUZZIFY angry
+	 TERM low :=  (0,0) (0.1, 1) (0.3,1) (0.4,0) ;
+	 TERM medium := (0.3,0) (0.4,1) (0.6,1) (0.7,0);
+	 TERM high := (0.6,0) (0.7,1) (1,1);
+	 METHOD : COG;
+	 DEFAULT := 0;
+END_DEFUZZIFY 
+
+RULEBLOCK No1
+	 AND : MIN;
+	 ACT : MIN;
+	 ACCU : MAX;
+	 RULE 0:   IF pleasure IS low AND arousal IS low THEN happiness IS low;
+	 RULE 1:   IF pleasure IS medium AND arousal IS medium THEN happiness IS medium;
+	 RULE 2:   IF pleasure IS high AND arousal IS high THEN happiness IS high;
+	 RULE 3:  IF pleasure IS low THEN surprise IS low;
+END_RULEBLOCK 
+
+END_FUNCTION_BLOCK

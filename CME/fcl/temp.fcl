@@ -1,0 +1,13 @@
+FUNCTION_BLOCK PAD 
+
+VAR_INPUT
+dominance : REAL;
+END_VAR 
+
+FUZZIFY dominance
+	 TERM low := (0,1) (0.1,1) (0.2,0);
+	 TERM medium := (0.1,0) (0.5,1) (0.6,1) (0.9,0);
+	 TERM high := (0.6,0) (0.9,1) (1,1);
+END_FUZZIFY 
+
+END_FUNCTION_BLOCK

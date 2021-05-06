@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<parameters>
+
+<!-- Theories considered for evaluation of incoming stimuli and generation of emotions --> 
+	<evaluationTheory>Scherer</evaluationTheory>
+	<emotionsTheory>Scherer</emotionsTheory>
+
+
+<!-- Dimensions used to evaluate incoming stimuli --> 
+	<dimension id = "pleasure">
+		<linguistic_term>
+			<name>low</name>
+			<mship_values>(0,1) (1, 0.3) (0.4,0)</mship_values>
+		</linguistic_term>
+		<linguistic_term>
+			<name>medium</name>
+			<mship_values>(0.2,0.3) (0.5,1) (0.8,1) (0.9,0)</mship_values>
+		</linguistic_term>
+		<linguistic_term>
+			<name>high</name>
+			<mship_values>(0.7,0) (0.9,1) (1,1)</mship_values>
+		</linguistic_term>
+	</dimension>
+
+	<dimension id = "arousal">
+		<linguistic_term>
+			<name>low</name>
+			<mship_values>(0,1) (1, 0.4) (0.4,0)</mship_values>
+		</linguistic_term>
+		<linguistic_term>
+			<name>medium</name>
+			<mship_values>(0.2,0.3) (0.5,1) (0.8,1) (0.9,0)</mship_values>
+		</linguistic_term>
+		<linguistic_term>
+			<name>high</name>
+			<mship_values>(0.7,0) (0.9,1) (1,1)</mship_values>
+		</linguistic_term>
+	</dimension>
+
+	<dimension id = "dominance">
+		<linguistic_term>
+			<name>low</name>
+			<mship_values>(0,1) (1, 0.3) (0.4,0)</mship_values>
+		</linguistic_term>
+		<linguistic_term>
+			<name>medium</name>
+			<mship_values>(0.2,0.3) (0.5,1) (0.8,1) (0.8,0)</mship_values>
+		</linguistic_term>
+		<linguistic_term>
+			<name>high</name>
+			<mship_values>(0.6,0) (0.9,1) (1,1)</mship_values>
+		</linguistic_term>
+	</dimension>
+
+
+<!-- Emotions and intensities --> 
+
+	<emotion id = "happiness">
+		<intensity>
+			<name>low</name>
+			<mship_values>(0,1) (1, 0.3) (0.4,0)</mship_values>
+		</intensity>
+		<intensity>
+			<name>medium</name>
+			<mship_values>(0.2,0.3) (0.5,1) (0.8,1) (0.9,0)</mship_values>
+		</intensity>
+		<intensity>
+			<name>high</name>
+			<mship_values>(0.7,0) (0.9,1) (1,1)</mship_values>
+		</intensity>
+	</emotion>
+
+	<emotion id = "surprise">
+		<intensity>
+			<name>low</name>
+			<mship_values>(0,1) (1, 0.3) (0.4,0)</mship_values>
+		</intensity>
+		<intensity>
+			<name>medium</name>
+			<mship_values>(0.2,0.3) (0.5,1) (0.8,1) (0.9,0)</mship_values>
+		</intensity>
+		<intensity>
+			<name>high</name>
+			<mship_values>(0.7,0) (0.9,1) (1,1)</mship_values>
+		</intensity>
+	</emotion>
+
+	<emotion id = "sadness">
+		<intensity>
+			<name>low</name>
+			<mship_values>(0,1) (1, 0.3) (0.4,0)</mship_values>
+		</intensity>
+		<intensity>
+			<name>medium</name>
+			<mship_values>(0.2,0.3) (0.5,1) (0.8,1) (0.9,0)</mship_values>
+		</intensity>
+		<intensity>
+			<name>high</name>
+			<mship_values>(0.7,0) (0.9,1) (1,1)</mship_values>
+		</intensity>
+	</emotion>
+
+	<emotion id = "disgust">
+		<intensity>
+			<name>low</name>
+			<mship_values>(0,1) (1, 0.3) (0.4,0)</mship_values>
+		</intensity>
+		<intensity>
+			<name>medium</name>
+			<mship_values>(0.2,0.3) (0.5,1) (0.8,1) (0.9,0)</mship_values>
+		</intensity>
+		<intensity>
+			<name>high</name>
+			<mship_values>(0.7,0) (0.9,1) (1,1)</mship_values>
+		</intensity>
+	</emotion>
+
+	<emotion id = "fear">
+		<intensity>
+			<name>low</name>
+			<mship_values>(0,1) (1, 0.3) (0.4,0)</mship_values>
+		</intensity>
+		<intensity>
+			<name>medium</name>
+			<mship_values>(0.2,0.3) (0.5,1) (0.8,1) (0.9,0)</mship_values>
+		</intensity>
+		<intensity>
+			<name>high</name>
+			<mship_values>(0.7,0) (0.9,1) (1,1)</mship_values>
+		</intensity>
+	</emotion>
+
+	<emotion id = "angry">
+		<intensity>
+			<name>low</name>
+			<mship_values>(0,1) (1, 0.3) (0.4,0)</mship_values>
+		</intensity>
+		<intensity>
+			<name>medium</name>
+			<mship_values>(0.2,0.3) (0.5,1) (0.8,1) (0.9,0)</mship_values>
+		</intensity>
+		<intensity>
+			<name>high</name>
+			<mship_values>(0.7,0) (0.9,1) (1,1)</mship_values>
+		</intensity>
+	</emotion>
+
+
+<!-- Rules for generating emotions --> 
+
+	<rule> IF pleasure IS low AND arousal IS low THEN happiness IS low</rule>
+	<rule> IF pleasure IS medium AND arousal IS medium THEN happiness IS medium</rule>
+	<rule> IF pleasure IS high AND arousal IS high THEN happiness IS high</rule>
+
+</parameters>
+
+
+
+
+
+
+
+
+
+
+
+

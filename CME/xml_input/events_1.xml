@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<parameters>
+
+<!-- Events --> 
+
+	<event>
+		<id>E1</id>
+		<tag>convenient</tag>
+	</event>
+	<event>
+		<id>E2</id>
+		<tag>convenient</tag>
+	</event>
+	<event>
+		<id>E3</id>
+		<tag>convenient</tag>
+	</event>
+
+</parameters>
+
+
+
+
+
+
+
+
+
+
+
+

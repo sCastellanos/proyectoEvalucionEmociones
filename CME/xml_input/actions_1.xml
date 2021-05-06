@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<parameters>
+
+<!-- Actions --> 
+	<action>
+		<id>A1</id>
+		<tag>compliment</tag>
+		<who>friend</who>
+	</action>
+
+	<action>
+		<id>A2</id>
+		<tag>compliment</tag>
+		<who>friend</who>
+	</action>
+
+	<action>
+		<id>A3</id>
+		<tag>compliment</tag>
+		<who>friend</who>
+	</action>
+
+</parameters>
+
+
+
+
+
+
+
+
+
+
+
+
